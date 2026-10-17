@@ -1,4 +1,4 @@
-/* Buildbench: directory search/filter + newsletter (frontend only). No dependencies. */
+/* Buildbench: directory search/filter + newsletter signup (POST /api/subscribe). No dependencies. */
 (function () {
   "use strict";
 
@@ -75,31 +75,46 @@
 
   function initNewsletter() {
     var form = $("newsletter-form"), input = $("nl-email"), msg = $("nl-msg");
-    var KEY = "buildbench_newsletter_email";
+    var button = form.querySelector('button[type="submit"]');
+    var honeypot = form.querySelector('input[name="company"]');
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-    function success(email) {
-      form.classList.add("done");
-      msg.classList.remove("error");
-      msg.textContent = "You're in! Watch " + email + " for the first issue.";
+    function show(text, isError) {
+      msg.classList.toggle("error", !!isError);
+      msg.textContent = text;
     }
-
-    try { var saved = localStorage.getItem(KEY); if (saved) success(saved); } catch (e) {}
+    function done(text) { form.classList.add("done"); show(text, false); }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var email = input.value.trim();
       if (!EMAIL_RE.test(email)) {
-        msg.classList.add("error");
-        msg.textContent = "Please enter a valid email address.";
+        show("Please enter a valid email address.", true);
         input.focus();
         return;
       }
-      // TODO: Resend gets wired in later. Replace this localStorage stub with a POST to a
-      // serverless endpoint (e.g. /api/subscribe) that adds the contact to a Resend audience.
-      // Nothing is sent anywhere yet; the email only stays in this browser.
-      try { localStorage.setItem(KEY, email); } catch (err) {}
-      success(email);
+      button.disabled = true;
+      show("Subscribing...", false);
+
+      // Adds the email to the Resend "Buildbench Newsletter" segment via api/subscribe.js.
+      fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, company: honeypot ? honeypot.value : "" })
+      })
+        .then(function (r) {
+          return r.json().catch(function () { return { ok: false, error: "server_error" }; });
+        })
+        .then(function (data) {
+          if (data && data.ok) return done("You're in! Watch " + email + " for the first issue.");
+          if (data && data.error === "already_subscribed") return done("You're already on the list. See you in your inbox.");
+          if (data && data.error === "invalid_email") { show("Please enter a valid email address.", true); input.focus(); return; }
+          show("Something went wrong on our end. Please try again in a minute.", true);
+        })
+        .catch(function () {
+          show("Couldn't reach the server. Check your connection and try again.", true);
+        })
+        .then(function () { button.disabled = false; });
     });
   }
 

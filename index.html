@@ -103,6 +103,7 @@
         <form id="newsletter-form" class="nl-form" novalidate>
           <label class="visually-hidden" for="nl-email">Email address</label>
           <input id="nl-email" name="email" type="email" placeholder="you@domain.com" required autocomplete="email">
+          <div class="visually-hidden" aria-hidden="true"><label for="nl-company">Company</label><input id="nl-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
           <button class="btn primary" type="submit">Subscribe</button>
           <p id="nl-msg" class="nl-msg" role="status" aria-live="polite"></p>
         </form>
