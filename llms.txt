@@ -2,10 +2,10 @@
 
 > Buildbench is a curated, searchable directory of AI coding tools for vibe coders and builders: AI code editors, coding agents, code assistants, AI app builders, backends and databases, hosting and deploy platforms, and model APIs. Each listing has a one-line description, a category, a pricing model (free, freemium or paid) and a link to the official site.
 
-Site: https://example.com/
+Site: https://build-stack-beta.vercel.app/
 Last updated: 2026-10-17
 Tools listed: 33
-Machine-readable data: https://example.com/data/tools.json
+Machine-readable data: https://build-stack-beta.vercel.app/data/tools.json
 
 Pricing labels are a quick guide. Check each tool's official site for current plans.
 
@@ -65,6 +65,6 @@ Pricing labels are a quick guide. Check each tool's official site for current pl
 
 ## About
 
-- [Submit a tool](https://example.com/#submit): send the name, link and a one-line description.
-- [Newsletter](https://example.com/#newsletter): a weekly email with the best new AI dev tools.
-- [Featured listings](https://example.com/#sponsor): sponsored spots at the top of the directory.
+- [Submit a tool](https://build-stack-beta.vercel.app/#submit): send the name, link and a one-line description.
+- [Newsletter](https://build-stack-beta.vercel.app/#newsletter): a weekly email with the best new AI dev tools.
+- [Featured listings](https://build-stack-beta.vercel.app/#sponsor): sponsored spots at the top of the directory.

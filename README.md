@@ -2,6 +2,10 @@
 
 **Buildbench** is a simple, fast directory of AI coding tools for vibe coders and builders: AI editors, coding agents, code assistants, app builders, backends, hosting and model APIs. Each tool gets a one-line description, a category, a pricing label and a link.
 
+**Live:** https://build-stack-beta.vercel.app (deployed on Vercel, Hobby plan; auto-deploys on every push to `main`).
+
+**Contact:** Kevin Clack · San Antonio, TX · kclack11@gmail.com
+
 This is the **first version**: a static site with no build step, no backend and no external services connected. It's built to be agent-maintainable. All data lives in one JSON file, and a tiny script regenerates the chatbot-readable `llms.txt`.
 
 ## What's on the homepage
@@ -11,7 +15,7 @@ This is the **first version**: a static site with no build step, no backend and 
 - **Directory**: a searchable grid with category filter chips and a pricing dropdown (free / freemium / paid). Loaded from `data/tools.json` with vanilla JS.
 - **Newsletter signup**: frontend only. It validates the email, shows a success state and stores the email in `localStorage` only. Resend gets wired in later.
 - **Submit / contact**: a no-backend form that opens the visitor's email app (`mailto:`).
-- **Footer**: links to `llms.txt` and the sitemap.
+- **Footer**: credit and contact (Kevin Clack · San Antonio, TX · kclack11@gmail.com), plus links to `llms.txt` and the sitemap.
 
 SEO basics are in place: `<title>`, meta description, canonical, Open Graph/Twitter tags, semantic HTML (`header`/`nav`/`main`/`section`/`footer`), `robots.txt` and `sitemap.xml`. The site also supports light and dark mode (it follows the OS setting) and works on mobile.
 
@@ -22,7 +26,7 @@ SEO basics are in place: `<title>`, meta description, canonical, Open Graph/Twit
 ├── index.html               # Homepage (all sections)
 ├── llms.txt                 # GENERATED chatbot-readable site summary and full tool list
 ├── robots.txt
-├── sitemap.xml              # Placeholder domain: https://example.com
+├── sitemap.xml              # Site URL: https://build-stack-beta.vercel.app
 ├── package.json             # Convenience scripts only (no dependencies)
 ├── data/
 │   └── tools.json           # THE single source of truth for all tools
@@ -76,21 +80,21 @@ npx serve .
    ```bash
    node scripts/build-llms.js
    # or: npm run build:llms
-   # with the real domain later: SITE_URL=https://yourdomain.com node scripts/build-llms.js
+   # defaults to https://build-stack-beta.vercel.app; for a custom domain later: SITE_URL=https://yourdomain.com node scripts/build-llms.js
    ```
 
 3. Commit `data/tools.json`, `llms.txt` and `assets/tools-fallback.js` together.
 
-## Deploy notes (not deployed yet)
+## Deployment
 
 - **Hostinger**: upload the repo contents (everything except `scripts/`, `package.json` and `README.md`, though leaving them in is harmless) to `public_html/` via File Manager, FTP or Hostinger's Git deployment. No build step is needed.
-- **Vercel**: import the repo, choose framework preset "Other", leave the build command empty and set the output directory to `.`. That's it.
-- **Before launch**: replace `https://example.com` in `index.html` (canonical and `og:*`), `robots.txt`, `sitemap.xml`, and run `SITE_URL=https://yourdomain.com node scripts/build-llms.js`. Also replace `hello@example.com` everywhere in `index.html`.
+- **Vercel (current)**: live at https://build-stack-beta.vercel.app on the Hobby plan. The project `build-stack` is Git-linked, so every push to `main` deploys to production automatically. Settings: framework preset "Other", no build command, output directory is the repo root.
+- **Custom domain later**: replace `https://build-stack-beta.vercel.app` in `index.html` (canonical and `og:*`), `robots.txt`, `sitemap.xml` and `scripts/build-llms.js`, then run `node scripts/build-llms.js`.
 
-## Placeholders to replace
+## Site URL, contact and placeholders
 
-- Domain `https://example.com`: in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt` (via `SITE_URL`).
-- Contact email `hello@example.com`: in the submit form, the sponsor "Claim this spot" links and the email link.
+- Site URL `https://build-stack-beta.vercel.app`: in `index.html`, `robots.txt`, `sitemap.xml` and `llms.txt` (via `SITE_URL` in `scripts/build-llms.js`).
+- Contact email `kclack11@gmail.com`: in the submit form, the sponsor "Claim this spot" links, the email link and the footer.
 - Featured listings: 3 "Your tool here" cards in `index.html` (`#sponsor`).
 - Newsletter: stores to `localStorage` only (see the `TODO` in `assets/app.js`).
 - OG image is an SVG. Some social networks prefer PNG, so export a 1200x630 PNG later.

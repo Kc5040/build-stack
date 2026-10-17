@@ -11,7 +11,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.join(__dirname, "..");
-const SITE_URL = (process.env.SITE_URL || "https://example.com").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://build-stack-beta.vercel.app").replace(/\/$/, "");
 const PRICING = ["free", "freemium", "paid"];
 
 const data = JSON.parse(fs.readFileSync(path.join(root, "data/tools.json"), "utf8"));
