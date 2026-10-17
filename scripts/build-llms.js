@@ -4,7 +4,7 @@
  *   - llms.txt                  (chatbot-readable summary of the site + every tool)
  *   - assets/tools-fallback.js  (inline copy of the data so index.html works from file://)
  * Usage: node scripts/build-llms.js      (no dependencies)
- * Set SITE_URL to change the domain, e.g. SITE_URL=https://buildbench.dev node scripts/build-llms.js
+ * Set SITE_URL to change the domain, e.g. SITE_URL=https://example.com node scripts/build-llms.js
  */
 "use strict";
 const fs = require("fs");
@@ -39,9 +39,9 @@ if (errors.length) {
 const tools = data.tools.slice().sort((a, b) => a.name.localeCompare(b.name));
 const categories = data.categories || [...new Set(tools.map((t) => t.category))];
 
-let out = `# Buildbench
+let out = `# Nellyon AI Stack
 
-> Buildbench is a curated, searchable directory of AI coding tools for vibe coders and builders: AI code editors, coding agents, code assistants, AI app builders, backends and databases, hosting and deploy platforms, and model APIs. Each listing has a one-line description, a category, a pricing model (free, freemium or paid) and a link to the official site.
+> Nellyon AI Stack is a curated, searchable directory of AI coding tools for vibe coders and builders: AI code editors, coding agents, code assistants, AI app builders, backends and databases, hosting and deploy platforms, and model APIs. Each listing has a one-line description, a category, a pricing model (free, freemium or paid) and a link to the official site.
 
 Site: ${SITE_URL}/
 Last updated: ${data.updated || new Date().toISOString().slice(0, 10)}

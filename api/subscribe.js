@@ -32,7 +32,7 @@ async function resend(path, method, body) {
     headers: {
       Authorization: "Bearer " + process.env.RESEND_API_KEY,
       "Content-Type": "application/json",
-      "User-Agent": "buildbench-subscribe/1.0",
+      "User-Agent": "nellyon-ai-stack-subscribe/1.0",
     },
     body: body ? JSON.stringify(body) : undefined,
   });

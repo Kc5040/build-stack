@@ -1,6 +1,6 @@
-# Buildbench: AI coding tools directory (v0.1)
+# Nellyon AI Stack: AI coding tools directory (v0.1)
 
-**Buildbench** is a simple, fast directory of AI coding tools for vibe coders and builders: AI editors, coding agents, code assistants, app builders, backends, hosting and model APIs. Each tool gets a one-line description, a category, a pricing label and a link.
+**Nellyon AI Stack** is a simple, fast directory of AI coding tools for vibe coders and builders: AI editors, coding agents, code assistants, app builders, backends, hosting and model APIs. Each tool gets a one-line description, a category, a pricing label and a link.
 
 **Live:** https://build-stack-beta.vercel.app (deployed on Vercel, Hobby plan; auto-deploys on every push to `main`).
 

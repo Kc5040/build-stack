@@ -1,4 +1,4 @@
-/* Buildbench: directory search/filter + newsletter signup (POST /api/subscribe). No dependencies. */
+/* Nellyon AI Stack: directory search/filter + newsletter signup (POST /api/subscribe). No dependencies. */
 (function () {
   "use strict";
 
