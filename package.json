@@ -1,0 +1,11 @@
+{
+  "name": "build-stack",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Buildbench: a static directory of AI coding tools for vibe coders and builders.",
+  "scripts": {
+    "build:llms": "node scripts/build-llms.js",
+    "serve": "npx serve ."
+  },
+  "license": "MIT"
+}

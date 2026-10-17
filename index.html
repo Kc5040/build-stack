@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buildbench | The AI coding tools directory for vibe coders and builders</title>
+  <meta name="description" content="Buildbench is a hand-picked, searchable directory of AI coding tools for vibe coders and builders: editors, coding agents, app builders, backends, hosting and model APIs.">
+  <link rel="canonical" href="https://example.com/">
+  <meta name="theme-color" content="#4f46e5">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Buildbench">
+  <meta property="og:title" content="Buildbench | AI coding tools for builders">
+  <meta property="og:description" content="Find the right AI coding tool fast. Search and filter editors, agents, app builders, backends and hosting.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable site summary">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#directory">Skip to the directory</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="/" aria-label="Buildbench home"><span class="logo-mark" aria-hidden="true">▲</span> Buildbench</a>
+      <nav aria-label="Main">
+        <a href="#directory">Tools</a>
+        <a href="#sponsor">Sponsor</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#submit">Submit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="eyebrow">For vibe coders &amp; builders</p>
+        <h1 id="hero-title">The AI coding stack, <span class="grad">sorted.</span></h1>
+        <p class="lede">A curated directory of the AI editors, coding agents, app builders, backends and hosts people actually ship with. Search it, filter it, pick a tool, get back to building.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#directory">Browse <span id="tool-count">30+</span> tools</a>
+          <a class="btn ghost" href="#newsletter">Get the weekly picks</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsor" class="sponsors wrap" aria-labelledby="sponsor-title">
+      <div class="section-head">
+        <h2 id="sponsor-title">Featured</h2>
+        <span class="tag">Sponsored spots</span>
+      </div>
+      <div class="sponsor-grid">
+        <article class="sponsor-card">
+          <span class="badge">Featured</span>
+          <h3>Your tool here</h3>
+          <p>Put your AI tool at the top of the directory and in front of builders choosing their stack.</p>
+          <a class="btn small" href="mailto:hello@example.com?subject=Buildbench%20featured%20listing">Claim this spot</a>
+        </article>
+        <article class="sponsor-card">
+          <span class="badge">Featured</span>
+          <h3>Your tool here</h3>
+          <p>Featured listings also appear in the weekly newsletter.</p>
+          <a class="btn small" href="mailto:hello@example.com?subject=Buildbench%20featured%20listing">Claim this spot</a>
+        </article>
+        <article class="sponsor-card">
+          <span class="badge">Featured</span>
+          <h3>Your tool here</h3>
+          <p>Limited spots each month. Ask about availability.</p>
+          <a class="btn small" href="mailto:hello@example.com?subject=Buildbench%20featured%20listing">Claim this spot</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="directory" class="directory wrap" aria-labelledby="dir-title">
+      <div class="section-head">
+        <h2 id="dir-title">The directory</h2>
+        <p id="result-count" class="muted" aria-live="polite"></p>
+      </div>
+      <form class="filters" role="search" onsubmit="return false">
+        <label class="visually-hidden" for="search">Search tools</label>
+        <input id="search" type="search" placeholder="Search tools, e.g. agent, Postgres, deploy" autocomplete="off">
+        <label class="visually-hidden" for="pricing">Pricing</label>
+        <select id="pricing">
+          <option value="">All pricing</option>
+          <option value="free">Free</option>
+          <option value="freemium">Freemium</option>
+          <option value="paid">Paid</option>
+        </select>
+      </form>
+      <div id="category-chips" class="chips" role="group" aria-label="Filter by category"></div>
+      <ul id="tool-grid" class="grid" aria-label="AI tools"></ul>
+      <p id="empty" class="empty" hidden>No tools match that yet. <a href="#submit">Suggest one?</a></p>
+      <noscript><p class="empty">Turn on JavaScript to search the directory, or read the full list in <a href="/llms.txt">llms.txt</a>.</p></noscript>
+    </section>
+
+    <section id="newsletter" class="newsletter" aria-labelledby="nl-title">
+      <div class="wrap nl-inner">
+        <div>
+          <h2 id="nl-title">One email a week. The best new AI dev tools.</h2>
+          <p>New launches, what's worth trying and what to skip. No spam, unsubscribe anytime.</p>
+        </div>
+        <form id="newsletter-form" class="nl-form" novalidate>
+          <label class="visually-hidden" for="nl-email">Email address</label>
+          <input id="nl-email" name="email" type="email" placeholder="you@domain.com" required autocomplete="email">
+          <button class="btn primary" type="submit">Subscribe</button>
+          <p id="nl-msg" class="nl-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="submit" class="submit wrap" aria-labelledby="submit-title">
+      <h2 id="submit-title">Submit a tool or get in touch</h2>
+      <p>Built something builders should know about, or spotted a tool we're missing? Send the name, link and a one-line pitch.</p>
+      <form class="submit-form" id="submit-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+        <div class="row">
+          <label>Tool name<input name="tool" required placeholder="e.g. My AI Tool"></label>
+          <label>Link<input name="url" type="url" required placeholder="https://"></label>
+        </div>
+        <label>One-line description<input name="description" maxlength="140" placeholder="What does it do?"></label>
+        <button class="btn primary" type="submit">Send via email</button>
+        <p class="muted small">Opens your email app. Or write to <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="year">2026</span> Buildbench. Listings are informational; check each tool's site for current pricing.</p>
+      <p><a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/tools-fallback.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

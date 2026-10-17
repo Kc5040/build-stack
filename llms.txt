@@ -1,0 +1,70 @@
+# Buildbench
+
+> Buildbench is a curated, searchable directory of AI coding tools for vibe coders and builders: AI code editors, coding agents, code assistants, AI app builders, backends and databases, hosting and deploy platforms, and model APIs. Each listing has a one-line description, a category, a pricing model (free, freemium or paid) and a link to the official site.
+
+Site: https://example.com/
+Last updated: 2026-10-17
+Tools listed: 33
+Machine-readable data: https://example.com/data/tools.json
+
+Pricing labels are a quick guide. Check each tool's official site for current plans.
+
+## AI Code Editor
+
+- [Cursor](https://cursor.com): AI-first code editor with chat, multi-file edits and background agents. Pricing: freemium.
+- [Visual Studio Code](https://code.visualstudio.com): The popular free editor, with Copilot chat and agent mode built in. Pricing: free.
+- [Windsurf](https://windsurf.com): Agentic IDE with the Cascade assistant that plans and edits across your codebase. Pricing: freemium.
+- [Zed](https://zed.dev): Fast, collaborative code editor written in Rust with built-in AI assistance. Pricing: freemium.
+
+## Coding Agent
+
+- [Aider](https://aider.chat): Open-source AI pair programmer in your terminal that commits to git. Pricing: free.
+- [Claude Code](https://www.anthropic.com/claude-code): Anthropic's terminal-based coding agent that reads, edits and runs your project. Pricing: paid.
+- [Cline](https://cline.bot): Open-source autonomous coding agent that runs inside VS Code. Pricing: free.
+- [Devin](https://devin.ai): Autonomous AI software engineer that takes tickets and ships PRs. Pricing: paid.
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli): Google's open-source agent that brings Gemini into your terminal. Pricing: freemium.
+- [OpenAI Codex](https://openai.com/codex): OpenAI's coding agent for the CLI, IDE and cloud tasks that open pull requests. Pricing: paid.
+
+## Code Assistant
+
+- [Amazon Q Developer](https://aws.amazon.com/q/developer/): AWS's AI assistant for coding, debugging and cloud work. Pricing: freemium.
+- [Continue](https://www.continue.dev): Open-source AI assistant for VS Code and JetBrains; bring any model. Pricing: free.
+- [GitHub Copilot](https://github.com/features/copilot): AI pair programmer with completions, chat and a coding agent across editors and GitHub. Pricing: freemium.
+- [JetBrains AI Assistant](https://www.jetbrains.com/ai/): AI chat, completion and the Junie agent inside JetBrains IDEs. Pricing: freemium.
+- [Sourcegraph Cody](https://sourcegraph.com/cody): AI coding assistant powered by Sourcegraph code search and codebase context. Pricing: paid.
+- [Tabnine](https://www.tabnine.com): Privacy-focused AI code completion and chat for teams. Pricing: paid.
+
+## App Builder
+
+- [Bolt.new](https://bolt.new): Prompt, run, edit and deploy full-stack web apps in the browser. Pricing: freemium.
+- [Firebase Studio](https://firebase.studio): Google's browser workspace for prototyping and building apps with Gemini. Pricing: freemium.
+- [Lovable](https://lovable.dev): Describe an app in plain English and get a working full-stack product. Pricing: freemium.
+- [Replit](https://replit.com): Browser IDE with an AI Agent that builds and deploys full apps from a prompt. Pricing: freemium.
+- [v0](https://v0.app): Vercel's generative UI and app builder for React and Next.js. Pricing: freemium.
+
+## Backend & Database
+
+- [Convex](https://www.convex.dev): Reactive TypeScript backend with database, functions and realtime sync. Pricing: freemium.
+- [Firebase](https://firebase.google.com): Google's app backend: database, auth, hosting and functions. Pricing: freemium.
+- [Neon](https://neon.com): Serverless Postgres with branching, great for agents and previews. Pricing: freemium.
+- [Supabase](https://supabase.com): Open-source Postgres backend with auth, storage, edge functions and vectors. Pricing: freemium.
+
+## Hosting & Deploy
+
+- [Cloudflare Pages](https://pages.cloudflare.com): Fast global hosting for static and full-stack sites on Cloudflare's network. Pricing: freemium.
+- [Hostinger](https://www.hostinger.com): Affordable web hosting, domains and VPS for shipping sites. Pricing: paid.
+- [Netlify](https://www.netlify.com): Git-based hosting and serverless functions for modern web projects. Pricing: freemium.
+- [Railway](https://railway.com): Deploy apps, databases and workers from a repo with almost no config. Pricing: paid.
+- [Vercel](https://vercel.com): Frontend cloud for deploying Next.js and static sites with preview URLs. Pricing: freemium.
+
+## Models & APIs
+
+- [Hugging Face](https://huggingface.co): Hub for open models, datasets and Spaces demos. Pricing: freemium.
+- [Ollama](https://ollama.com): Run open-source LLMs locally with a single command. Pricing: free.
+- [OpenRouter](https://openrouter.ai): One API for hundreds of LLMs with unified billing and routing. Pricing: freemium.
+
+## About
+
+- [Submit a tool](https://example.com/#submit): send the name, link and a one-line description.
+- [Newsletter](https://example.com/#newsletter): a weekly email with the best new AI dev tools.
+- [Featured listings](https://example.com/#sponsor): sponsored spots at the top of the directory.
